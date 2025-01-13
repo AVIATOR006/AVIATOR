@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tela Futurística</title>
+  <style>
+    /* Reset básico */
+    body, html {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+      background-color: #121212;
+      color: white;
+      height: 100%;
+    }
+
+    /* Centralizar o conteúdo */
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    /* Efeito de brilho e borda futurista nos botões */
+    .btn {
+      background: linear-gradient(45deg, #00c6ff, #0072ff);
+      color: white;
+      border: 2px solid transparent;
+      border-radius: 10px;
+      padding: 20px 40px;
+      font-size: 20px;
+      font-weight: bold;
+      text-transform: uppercase;
+      cursor: pointer;
+      outline: none;
+      position: relative;
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.5), 0 0 30px rgba(0, 255, 255, 0.5);
+      transition: all 0.3s ease-in-out;
+      margin-bottom: 20px; /* Adicionando espaçamento entre os botões */
+    }
+
+    /* Efeito de brilho ao passar o mouse */
+    .btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 255, 255, 0.2);
+      border-radius: 10px;
+      opacity: 0;
+      transition: opacity 0.3s;
+      z-index: -1;
+    }
+
+    .btn:hover {
+      background: linear-gradient(45deg, #00ffcc, #00aaff);
+      transform: scale(1.1);
+      box-shadow: 0 0 40px rgba(0, 255, 255, 0.7), 0 0 50px rgba(0, 255, 255, 0.5);
+    }
+
+    .btn:hover::before {
+      opacity: 1;
+    }
+
+    /* Adiciona um efeito de brilho no fundo */
+    body {
+      background: linear-gradient(135deg, #121212, #1e1e1e);
+      background-size: 400% 400%;
+      animation: gradientAnimation 5s ease infinite;
+    }
+
+    @keyframes gradientAnimation {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <button class="btn" onclick="location.href='livros.html'">Livro</button>
+    <button class="btn" onclick="location.href='curso.html'">Curso</button>
+  </div>
+</body>
+</html>

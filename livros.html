@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site de Jogos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-100%);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes hoverBounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-5px);
+            }
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(120deg, #1e1e2f, #283048);
+            color: #f0f0f0;
+            animation: fadeIn 1s ease-out;
+        }
+
+        /* Barra superior */
+        .top-bar {
+            background-color: #1c1c3c;
+            color: #00d1ff;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            animation: slideIn 1s ease-out;
+        }
+
+        /* Estilo das categorias */
+        .category {
+            margin: 20px;
+            padding: 20px;
+            background-color: #2c2c45;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 1s ease-out;
+        }
+
+        /* Destaque para categorias VIP */
+        .category.vip {
+            background: linear-gradient(135deg, #ffcc00, #ffa500);
+            color: #fff;
+            border: 2px solid #ffae42;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+        }
+
+        .category h2 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #00d1ff;
+            border-bottom: 2px solid #00d1ff;
+            display: inline-block;
+            padding-bottom: 5px;
+            animation: fadeIn 1.2s ease-out;
+        }
+
+        /* Lista de jogos */
+        .games-list {
+            display: flex;
+            overflow-x: auto;
+            gap: 20px;
+        }
+
+        .game {
+            text-align: center;
+            flex: 0 0 auto;
+            width: 160px;
+            background-color: #23233b;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        .game:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+            animation: hoverBounce 0.5s ease-out;
+        }
+
+        .game img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .game p {
+            font-size: 14px;
+            color: #a0a0b0;
+        }
+
+        /* Ícones de ações */
+        .game-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .game-actions a {
+            text-decoration: none;
+            font-size: 18px;
+            color: #fff;
+            background-color: #005f99;
+            padding: 10px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .game-actions a:hover {
+            background-color: #00d1ff;
+            transform: scale(1.1);
+        }
+
+        .game-actions i {
+            margin: 0;
+        }
+
+        /* Barra de rolagem */
+        .games-list::-webkit-scrollbar {
+            height: 10px;
+        }
+
+        .games-list::-webkit-scrollbar-thumb {
+            background-color: #3a3a5e;
+            border-radius: 5px;
+        }
+
+        .games-list::-webkit-scrollbar-thumb:hover {
+            background-color: #5a5a7e;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <h1>LIVROS</h1>
+    </div>
+
+    <!-- Categoria VIP -->
+    <div class="category vip">
+        <h2>VIP - LIVROS EXCLU</h2>
+        <div class="games-list">
+            <div class="game">
+                <img src="jogo1.png" alt="Jogo 1">
+                <p>O segredo do Aviator</p>
+                <div class="game-actions">
+                    <!-- Link para baixar PDF -->
+                    <a href="jogo1.pdf" download aria-label="Baixar">
+                        <i class="fas fa-download"></i>
+                    </a>
+                    <a href="#" aria-label="Mais informações">
+                        <i class="fas fa-info-circle"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="game">
+                <img src="jogo1.png" alt="Jogo 2">
+                <p>O segredo das velas Rosas</p>
+                <div class="game-actions">
+                    <a href="jogo2.pdf" download aria-label="Baixar">
+                        <i class="fas fa-download"></i>
+                    </a>
+                    <a href="#" aria-label="Mais informações">
+                        <i class="fas fa-info-circle"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Categoria Regular -->
+    <div class="category">
+        <h2>LIVROS GRATUITOS</h2>
+        <div class="games-list">
+            <div class="game">
+                <img src="jogo1.png" alt="Jogo 3">
+                <p>Gestão de banca</p>
+                <div class="game-actions">
+                    <a href="jogo3.pdf" download aria-label="Baixar">
+                        <i class="fas fa-download"></i>
+                    </a>
+                    <a href="#" aria-label="Mais informações">
+                        <i class="fas fa-info-circle"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="game">
+                <img src="jogo1.png" alt="Jogo 4">
+                <p>Alavancagem</p>
+                <div class="game-actions">
+                    <a href="jogo4.pdf" download aria-label="Baixar">
+                        <i class="fas fa-download"></i>
+                    </a>
+                    <a href="#" aria-label="Mais informações">
+                        <i class="fas fa-info-circle"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="game">
+                <img src="jogo1.png" alt="Jogo 5">
+                <p>Técnicas do Aviator</p>
+                <div class="game-actions">
+                    <a href="jogo5.pdf" download aria-label="Baixar">
+                        <i class="fas fa-download"></i>
+                    </a>
+                    <a href="#" aria-label="Mais informações">
+                        <i class="fas fa-info-circle"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

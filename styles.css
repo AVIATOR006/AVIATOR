@@ -1,0 +1,699 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fonte geral */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #e0f7fa; /* Cor de fundo suave */
+    line-height: 1.0;
+}
+
+/* Barra Superior */
+.top-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(45deg, #007BFF, #0056b3);
+    color: #fff;
+    padding:15px;
+    text-align: center;
+    z-index: 100;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.top-bar h1 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Imagem principal */
+.image-container {
+    margin-top: 80px; /* Para não sobrepor a barra fixa */
+    text-align: center;
+    padding: 20px;
+}
+
+.image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Cantos arredondados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Texto */
+.text-container {
+    padding: 20px;
+    text-align: center;
+    background-color: #fff;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.highlighted-text {
+    font-size: 22px;
+    font-weight: bold;
+    color: #007BFF;
+    margin-bottom: 15px;
+}
+
+.normal-text, .important-note, .call-to-action {
+    margin-bottom: 20px;
+}
+
+.important-note {
+    font-weight: bold;
+    color: #D9534F;
+}
+
+.call-to-action {
+    font-weight: bold;
+    color: #28A745;
+    font-size: 18px;
+}
+
+/* Abas */
+.tabs-container {
+    margin: 20px;
+}
+
+.tab-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap; /* Ajusta automaticamente em telas menores */
+}
+
+.tab {
+    flex: 1;
+    text-align: center;
+    padding: 15px 10px;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.tab:hover {
+    background-color: #0056b3;
+    transform: translateY(-5px);
+}
+
+/* Informações */
+.info-sections {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 20px;
+    flex-wrap: wrap; /* Ajusta automaticamente em telas menores */
+}
+
+.info-box {
+    flex: 1 1 calc(33.33% - 20px); /* Três caixas por linha */
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.info-box i {
+    font-size: 40px;
+    color: #007BFF;
+    margin-bottom: 15px;
+}
+
+.info-box h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.info-box p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Casas de Aposta */
+.betting-tabs-container {
+    margin: 20px;
+}
+
+.betting-tab-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.betting-tab {
+    flex: 1 1 calc(50% - 20px);
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.betting-tab:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.betting-tab h3 {
+    font-size: 20px;
+    color: #007BFF;
+    margin-bottom: 15px;
+}
+
+.betting-tab p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.btn-resgatar-bonus {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-resgatar-bonus:hover {
+    background-color: #0056b3;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .tab-row, .info-sections, .betting-tab-row {
+        flex-direction: column;
+    }
+
+    .tab, .info-box, .betting-tab {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+}
+/* Seção de Comentários */
+.comments-section {
+    background-color: #f9f9f9;
+    margin: 40px 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.comments-section h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+.comments-list {
+    margin-top: 20px;
+}
+
+.comment {
+    display: flex;
+    align-items: flex-start;
+    background-color: #fff;
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.profile-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.comment-content {
+    font-family: 'Arial', sans-serif;
+}
+
+.comment-content p {
+    margin: 5px 0;
+    color: #555;
+    line-height: 1.6;
+}
+
+.comment-content p strong {
+    font-size: 16px;
+    color: #007BFF;
+    display: block;
+    margin-bottom: 5px;
+}
+/* Seção de Redes Sociais */
+.social-media-section {
+    background-color: #007BFF;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin: 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.social-media-section h2 {
+    font-size: 24px;
+    font-family: 'Arial', sans-serif;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.social-icon {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    padding: 10px 20px;
+    background-color: #0056b3;
+    border-radius: 5px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.social-icon i {
+    font-size: 20px;
+}
+
+.social-icon:hover {
+    background-color: #003f7f;
+}
+
+/* Responsividade para Redes Sociais */
+@media (max-width: 768px) {
+    .social-icons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .social-icon {
+        width: 80%;
+        justify-content: center;
+    }
+}
+/* Botão Flutuante de WhatsApp */
+.floating-button {
+    position: fixed;
+    bottom: 20px; /* Distância da parte inferior */
+    right: 20px; /* Distância da lateral direita */
+    background-color: #25D366; /* Cor do WhatsApp */
+    color: white; /* Cor do ícone */
+    border-radius: 50%; /* Torna o botão circular */
+    width: 60px; /* Largura do botão */
+    height: 60px; /* Altura do botão */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+    z-index: 1000; /* Garante que o botão fique acima de outros elementos */
+    text-decoration: none; /* Remove sublinhado */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.floating-button:hover {
+    background-color: #128C7E; /* Cor de fundo ao passar o mouse */
+    transform: scale(1.1); /* Leve aumento no tamanho ao passar o mouse */
+}
+
+.floating-button i {
+    font-size: 30px; /* Tamanho do ícone */
+}
+/* Estilo para as notificações */
+#notifications-container {
+    position: fixed;
+    top: 20px; /* Distância do topo */
+    left: 50%;
+    transform: translateX(-50%); /* Centraliza as notificações */
+    width: 300px;
+    z-index: 1000;
+    pointer-events: none; /* As notificações não interferem com cliques */
+}
+
+
+/* Estilo para o container de notificações */
+#notification-container {
+    position: fixed;
+    top: 20px; /* Distância do topo */
+    left: 50%;
+    transform: translateX(-50%); /* Centraliza as notificações */
+    width: 300px;
+    z-index: 1000;
+    pointer-events: none; /* As notificações não interferem com cliques */
+}
+
+/* Estilo para cada notificação */
+.notification {
+    background-color: #28a745; /* Cor verde para sucesso */
+    color: white;
+    padding: 15px 20px;
+    border-radius: 5px;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Efeito de exibição da notificação */
+.notification-show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Efeito de esconder a notificação */
+.notification-hide {
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+/* Estilo da seção de publicidade */
+.photo-slider {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 120px; /* Altura ajustada para imagens pequenas */
+    background-color: #f0f0f0;
+    margin-top: 40px;
+    padding: 10px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Faixa de imagens que desliza */
+.slider-track {
+    display: flex;
+    gap: 10px; /* Espaço entre as imagens */
+    animation: slide 15s linear infinite; /* Animação infinita */
+    height: 100%;
+    align-items: center;
+}
+
+/* Imagens ajustadas */
+.slider-track img {
+    width: 150px; /* Largura reduzida */
+    height: 100px; /* Altura ajustada */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Leve sombra */
+}
+
+/* Animação de transição */
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+/* Casas de Aposta */
+.betting-tabs-container {
+    margin: 20px;
+}
+
+.betting-tab-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.betting-tab {
+    flex: 1 1 calc(50% - 20px);
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.betting-tab:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.betting-tab h3 {
+    font-size: 20px;
+    color: #007BFF;
+    margin-bottom: 15px;
+}
+
+.betting-tab p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* Ajuste para as imagens nas casas de apostas */
+.betting-tab img {
+    width: 80px;  /* Reduzido para tamanho mais compacto */
+    height: auto; /* Mantém a proporção */
+    margin-bottom: 15px;
+    border-radius: 8px;  /* Bordas arredondadas */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  /* Sombra suave */
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 768px) {
+    .betting-tab {
+        flex: 1 1 100%; /* As abas vão ocupar toda a largura */
+        margin-bottom: 20px;
+    }
+
+    .betting-tab img {
+        width: 150px;  /* Reduz ainda mais em telas pequenas */
+        height: auto;
+    }
+}
+
+
+/* Container do banner */
+.banner-container {
+    position: relative;
+    width: 100%;
+    height: 250px;  /* Altura do contêiner */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Cada imagem/banner */
+.banner-slide {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s ease-in-out;
+    opacity: 0;
+    visibility: hidden; /* Inicialmente, as imagens não são visíveis */
+}
+
+/* Adicionando a aba com borda ao redor das imagens */
+.banner-aba {
+    border: 5px solid #fff;  /* Borda branca ao redor da imagem */
+    border-radius: 10px;      /* Bordas arredondadas */
+    overflow: hidden;         /* Garantir que as imagens não saiam da borda */
+    width: 80%;               /* Ajuste o tamanho da aba */
+    height: 70%;              /* Ajuste a altura da aba */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.4); /* Fundo levemente escuro para destacar a imagem */
+}
+
+/* Estilo da imagem dentro da aba */
+.banner-aba img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Quando uma imagem estiver visível */
+.banner-slide.active {
+    left: 0;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Animação para transição de imagem */
+@keyframes fade-in-out {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+    }
+    20% {
+        opacity: 1;
+        visibility: visible;
+    }
+    80% {
+        opacity: 1;
+        visibility: visible;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+
+
+/* Estilos para a barra principal (já existente) */
+.top-bar {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+}
+
+.top-bar-content h1 {
+    margin: 0;
+}
+
+/* Estilos para a barra principal (já existente) */
+.top-bar {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+}
+
+.top-bar-content h1 {
+    margin: 0;
+}
+
+/* Barra Principal (TOP 5 MELHORES CASAS) */
+.top-bar {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+}
+
+.top-bar-content h1 {
+    margin: 0;
+}
+
+/* Barra Secundária - Logo abaixo da barra TOP 5 */
+.secondary-bar {
+    background-color: #333; /* Cor de fundo da barra */
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.secondary-bar .nav-options {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.secondary-bar .nav-options li {
+    display: inline-block;
+}
+
+.secondary-bar .nav-options a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 8px;  /* Espaço entre o ícone e o texto */
+    transition: background-color 0.3s ease;
+}
+
+.secondary-bar .nav-options a:hover {
+    background-color: #555;
+}
+
+.secondary-bar .nav-options i {
+    font-size: 18px;
+}
+
+
+.btn-resgata-bonus {
+    display: inline-flex; /* Usa flexbox */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    padding: 6px 12px; /* Tamanho menor */
+    font-size: 12px; /* Texto menor */
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #007bff; /* Cor primária */
+    border: none;
+    border-radius: 3px; /* Bordas arredondadas menores */
+    text-decoration: none; /* Remove o sublinhado */
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transições suaves */
+    cursor: pointer;
+    min-width: 100px; /* Garantir largura mínima */
+    height: 32px; /* Define uma altura fixa para consistência */
+}
+
+.btn-resgata-bonus i {
+    margin-right: 4px; /* Espaço entre o ícone e o texto */
+    font-size: 12px; /* Ícone menor */
+}
+
+.btn-resgata-bonus:hover {
+    background-color: #0056b3; /* Cor mais escura no hover */
+    transform: translateY(-1px); /* Leve elevação no hover */
+}
+
+.btn-resgata-bonus:active {
+    background-color: #003f7f; /* Cor mais escura ao clicar */
+    transform: translateY(0); /* Remove o efeito de elevação */
+}
